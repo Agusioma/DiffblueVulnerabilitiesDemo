@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Racing Event Booking</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <div style="margin-top: 5%; width: 75%">
+            <div class="card container d-flex justify-content-center" style="margin-bottom: 3%">
+                <div style="margin-top: 3%" class="d-flex justify-content-center">
+                    <h4>Add your details </h4>
+                </div>
+                <div class="mb-3 d-flex justify-content-center">
+                    <form style="padding: 5%" action="#" th:action="@{/racers/add}" th:object="${racer}" method="post">
+                        <div class="mb-3">
+
+                            <div class="mb-3" style="width: 100%">
+                                <label class="form-label">First Name</label>
+                                <p><input type="text" class="form-control" th:field="*{firstName}"/></p>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Last Name</label>
+                                <p><input type="text" class="form-control" th:field="*{secondName}"/></p>
+                            </div>
+                            <div class="mb-3" style="width: 100%">
+                                <label class="form-label">Amount paid</label>
+                                <p><input type="text" class="form-control" th:field="*{amountPaid}"/></p>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Ticket Number</label>
+                                <p><input type="text" class="form-control" th:field="*{ticketNumber}"/></p>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn btn-danger form-control" value="Submit"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
