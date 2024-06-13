@@ -17,6 +17,7 @@ import org.springframework.mock.web.MockHttpServletResponse;
 
 
 import java.io.IOException;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -51,7 +52,7 @@ public class InsecureDeserializationTest {
         Car deSerializedCar = carController.deserializeCar(serializedBase64CarString);
 
         // Mock behavior
-        when(carRepository.findById(437L)).thenReturn(java.util.Optional.of(expectedCar));
+        when(carRepository.findById(437L)).thenReturn(Optional.of(expectedCar));
 
         // Call the method under test
         Car retrievedCar = carController.retrieveCarDetails(437L, request, response);
@@ -67,7 +68,7 @@ public class InsecureDeserializationTest {
         when(request.getCookies()).thenReturn(new Cookie[]{storedCookie});
 
         // Mocking behavior for deserialization failure
-        when(carRepository.findById(437L)).thenReturn(java.util.Optional.of(expectedCar));
+        when(carRepository.findById(437L)).thenReturn(Optional.of(expectedCar));
 
         // Call the method under test
         Car retrievedCar = carController.retrieveCarDetails(437L, request, response);
