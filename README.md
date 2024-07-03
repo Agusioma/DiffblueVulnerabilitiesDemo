@@ -38,8 +38,6 @@ Next, use your terminal to create the necessary tables. Note that you don’t ne
 
 You can then use the terminal to create the tables needed using these steps.
 
-Note that you don’t need to follow these steps if you have other tools, like DataGrip, that you can use to run the queries. You can just go ahead and copy the queries from the **`racingDemo.txt`** file found in the root of the `racingDemo` directory. Just remember to replace `<Your-database-name>` with your database name.
-
 In a new terminal instance, run the `docker ps` command to get the container ID or name.
 
 Execute the docker container in an interactive shelling using the command below
