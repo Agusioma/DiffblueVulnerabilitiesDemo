@@ -1,6 +1,6 @@
 # racingDB Demo
 
-As earlier mentioned, if you have Docker installed in your machine, you can use the docker-compose.yml file. Start the Docker Daemon by running the command below in your terminal.
+Start the Docker Daemon by running the command below in your terminal.
 
 ```bash
 sudo systemctl start docker
