@@ -20,8 +20,8 @@ You’ll know the database has been set up after you see log outputs similar to 
 [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
 ```
 
-## Configure the application.properties file
-After that, open up the application.properties file, found in the src/main/resources/ directory. You’ll need to set the properties below appropriately for the spring app to connect to the database successfully:
+## Configure the `application.properties` file
+After that, open up the `application.properties` file, found in the `src/main/resources/` directory. You’ll need to set the properties below appropriately for the spring app to connect to the database successfully:
 
 ```bash
 spring.datasource.url=jdbc:mysql://localhost:3306/<Your-Database>
