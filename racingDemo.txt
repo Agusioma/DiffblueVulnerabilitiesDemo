@@ -1,4 +1,4 @@
-USE racingDB;
+USE <Your-database-name>;
 
 -- Create the participants table
 CREATE TABLE IF NOT EXISTS participants (
